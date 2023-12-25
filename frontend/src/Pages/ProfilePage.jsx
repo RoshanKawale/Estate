@@ -1,8 +1,13 @@
 import React from 'react'
+import Profile from '../Feature/Profile'
+import Header from '../Feature/Header'
 
 const ProfilePage = () => {
   return (
-    <div>Page</div>
+   <div>
+    <Header/>
+    <Profile/>
+   </div>
   )
 }
 

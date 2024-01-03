@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import userRouter from "./routes/user.js";
+import listingRouter from "./routes/listing.js"
 import { errormiddleware } from "./utils/error.js";
 import cookieParser from "cookie-parser";
 
@@ -27,5 +28,6 @@ app.listen(3000, () => {
 });
 
 app.use('/api/user' , userRouter);
+app.use('/api/listing' , listingRouter);
 
 app.use(errormiddleware)

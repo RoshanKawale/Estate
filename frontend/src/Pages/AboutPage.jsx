@@ -1,8 +1,14 @@
 import React from 'react'
+import About from '../Feature/About'
+import Header from '../Feature/Header'
 
 const AboutPage = () => {
   return (
-    <div>AboutPage</div>
+    <>
+    <Header></Header>
+    <About></About>
+    </>
+    
   )
 }
 

@@ -25,17 +25,17 @@ const __dirname = path.resolve();
 app.use(express.json());
 app.use(cookieParser());
 
+app.use("/api/user", userRouter);
+app.use("/api/listing", listingRouter);
+
 app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
 });
 
+app.use(errormiddleware);
+
 app.listen(3000, () => {
   console.log("listening on port 3000");
 });
-
-app.use("/api/user", userRouter);
-app.use("/api/listing", listingRouter);
-
-app.use(errormiddleware);

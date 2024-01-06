@@ -9,6 +9,7 @@ import PrivateRoute from "./Feature/PrivateRoute";
 import CreateListingPage from "./Pages/CreateListingPage";
 import UpdateListingPage from "./Pages/UpdateListingPage";
 import LIstingPage from "./Pages/LIstingPage";
+import SearchPage from "./Pages/SearchPage";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/Sign-in" element={<SignInPage />} />
         <Route path="/Sign-up" element={<SignUpPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/search" element={<SearchPage />} />
         <Route path="/listing/:listingId" element={<LIstingPage />} />
         <Route element={<PrivateRoute />}>
           <Route path="/profile" element={<ProfilePage />} />
